@@ -129,13 +129,15 @@
             "allowedHosts" : [ "hiwara-pied.vercel.app", "iwara.pro-ivan.com" ],
             "proxy" : {
                 "/api" : {
-                    "target" : "https://api.iwara.tv",
+                    "target" : "https://api.iwara.tv/",
+                    "changeOrigin": true,
                     "pathRewrite" : {
                         "^/api" : ""
                     }
                 },
                 "/files" : {
-                    "target" : "https://files.iwara.tv",
+                    "target" : "https://files.iwara.tv/",
+                    "changeOrigin": true,
                     "pathRewrite" : {
                         "^/files" : ""
                     }
