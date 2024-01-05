@@ -148,7 +148,7 @@
         },
         "router" : {
             "mode" : "history",
-            "base" : "/dist/build/h5"
+            "base" : "/"
         }
     },
     "locale" : "auto",
