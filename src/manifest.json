@@ -128,7 +128,7 @@
             "port" : 51001,
             "disableHostCheck" : true,
             "proxy" : {
-                "/api" : {
+                "/api/*" : {
                     "target" : "https://api.iwara.tv",
                     "changeOrigin": true,
                     "secure" : true,
@@ -136,7 +136,7 @@
                         "^/api" : ""
                     }
                 },
-                "/files" : {
+                "/files/*" : {
                     "target" : "https://files.iwara.tv",
                     "changeOrigin": true,
                     "secure" : true,
