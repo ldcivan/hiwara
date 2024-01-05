@@ -129,17 +129,17 @@
             "disableHostCheck" : true,
             "proxy" : {
                 "/api" : {
-                    "target" : "http://api.iwara.tv",
+                    "target" : "https://api.iwara.tv",
                     "changeOrigin": true,
-                    "secure" : false,
+                    "secure" : true,
                     "pathRewrite" : {
                         "^/api" : ""
                     }
                 },
                 "/files" : {
-                    "target" : "http://files.iwara.tv",
+                    "target" : "https://files.iwara.tv",
                     "changeOrigin": true,
-                    "secure" : false,
+                    "secure" : true,
                     "pathRewrite" : {
                         "^/files" : ""
                     }
