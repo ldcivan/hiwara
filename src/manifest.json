@@ -126,7 +126,7 @@
         "darkmode" : true,
         "devServer" : {
             "port" : 51001,
-            "allowedHosts" : [ "hiwara-pied.vercel.app", "iwara.pro-ivan.com" ],
+            "allowedHosts" : [ "*", "iwara.pro-ivan.com" ],
             "proxy" : {
                 "/api" : {
                     "target" : "https://api.iwara.tv/",
