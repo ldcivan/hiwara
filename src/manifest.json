@@ -126,18 +126,20 @@
         "darkmode" : true,
         "devServer" : {
             "port" : 51001,
-            "allowedHosts" : [ "*", "iwara.pro-ivan.com" ],
+            "disableHostCheck" : true,
             "proxy" : {
                 "/api" : {
-                    "target" : "https://api.iwara.tv",
+                    "target" : "http://api.iwara.tv",
                     "changeOrigin": true,
+                    "secure" : false,
                     "pathRewrite" : {
                         "^/api" : ""
                     }
                 },
                 "/files" : {
-                    "target" : "https://files.iwara.tv",
+                    "target" : "http://files.iwara.tv",
                     "changeOrigin": true,
+                    "secure" : false,
                     "pathRewrite" : {
                         "^/files" : ""
                     }
