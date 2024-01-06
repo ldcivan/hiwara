@@ -635,11 +635,11 @@ function creatHeader(cb) {
 export function search(type, query, page, cb) {
 	if (query.startsWith('tag:')) {
 	    // 提取 tagName 的值
-	    var tagName = text.match(/tag:(.+?){/)[1];
+	    var tagName = query.match(/tag:(.+?){/)[1];
 	    tagName = tagName.replace(/\+/g, "%2C"); // 将 + 替换为 %2C
 	
 	    // 提取 sortName 的值
-	    var sortNameMatch = text.match(/{(.+?)}/);
+	    var sortNameMatch = query.match(/{(.+?)}/);
 	    var sortName = sortNameMatch ? sortNameMatch[1] : "date";
 		
 	    let data = {
@@ -652,9 +652,12 @@ export function search(type, query, page, cb) {
 		    cb(res, code)
 	    })
 	} else { 
+	    var sortNameMatch = query.match(/{(.+?)}/);
+	    var sortName = sortNameMatch ? sortNameMatch[1] : "date";
 	    let data = {
 		    type: type,
-		    query: query,
+		    query: query.match(/(.+?){/)[1];,
+		    sort: sortName,
 		    page: page,
 		    limit: 32
 	    }
