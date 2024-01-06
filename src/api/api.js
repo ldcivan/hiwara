@@ -283,8 +283,8 @@ export function getVideo(id, cb) {
 					id: res.id,
 					title: res.title,
 					author: res.user.name,
-					avatar: res.user.avatar ? 'https://i.iwara.tv/image/avatar/' + res.user.avatar.id + '/' + res.user.avatar.name : 'https://www.iwara.tv/images/default-avatar.jpg',
-					preview: res.file != null ? "https://i.iwara.tv/image/thumbnail/" + res.file.id + "/thumbnail-" + fill0(res.thumbnail, 1) + ".jpg" : null,
+					avatar: res.user.avatar ? 'https://iwaraapi.pro-ivan.cn/imgs/image/avatar/' + res.user.avatar.id + '/' + res.user.avatar.name : 'https://www.iwara.tv/images/default-avatar.jpg',
+					preview: res.file != null ? "https://iwaraapi.pro-ivan.cn/imgs/image/thumbnail/" + res.file.id + "/thumbnail-" + fill0(res.thumbnail, 1) + ".jpg" : null,
 					synopsis: res.body,
 					date: res.createdAt,
 					numView: res.numViews,
@@ -326,8 +326,8 @@ export function getVideo(id, cb) {
 					res.title,
 					res.user.name,
 					res.createdAt,
-					res.file != null ? "https://i.iwara.tv/image/thumbnail/" + res.file.id + "/thumbnail-" + fill0(res.thumbnail, 1) + ".jpg" : null,
-					res.user.avatar ? 'https://i.iwara.tv/image/avatar/' + res.user.avatar.id + '/' + res.user.avatar.name : 'https://www.iwara.tv/images/default-avatar.jpg',
+					res.file != null ? "https://iwaraapi.pro-ivan.cn/imgs/image/thumbnail/" + res.file.id + "/thumbnail-" + fill0(res.thumbnail, 1) + ".jpg" : null,
+					res.user.avatar ? 'https://iwaraapi.pro-ivan.cn/imgs/image/avatar/' + res.user.avatar.id + '/' + res.user.avatar.name : 'https://www.iwara.tv/images/default-avatar.jpg',
 					'video',
 					d.getTime()
 				])
@@ -447,13 +447,13 @@ export function getImage(id, cb) {
 				numLikes: res.numLikes,
 				numViews: res.numViews,
 				following: res.user.following,
-				avatar: res.user.avatar ? 'https://i.iwara.tv/image/avatar/' + res.user.avatar.id + '/' + res.user.avatar.name : 'https://www.iwara.tv/images/default-avatar.jpg',
+				avatar: res.user.avatar ? 'https://iwaraapi.pro-ivan.cn/imgs/image/avatar/' + res.user.avatar.id + '/' + res.user.avatar.name : 'https://www.iwara.tv/images/default-avatar.jpg',
 				files: [],
 				username: res.user.username,
 				liked: res.liked
 			}
 			for (let i = 0; i < res.files.length; i++) {
-				resData.files.push('https://i.iwara.tv/image/large/' + res.files[i].id + '/' + res.files[i].name)
+				resData.files.push('https://iwaraapi.pro-ivan.cn/imgs/image/large/' + res.files[i].id + '/' + res.files[i].name)
 			}
 			cb(resData, code)
 			// #ifdef APP-PLUS
@@ -465,7 +465,7 @@ export function getImage(id, cb) {
 				res.title,
 				res.user.name,
 				res.createdAt,
-				res.thumbnail != null ? "https://i.iwara.tv/image/thumbnail/" + rs.thumbnail.id + "/" + rs.thumbnail.name : null,
+				res.thumbnail != null ? "https://iwaraapi.pro-ivan.cn/imgs/image/thumbnail/" + rs.thumbnail.id + "/" + rs.thumbnail.name : null,
 				'image',
 				d.getTime()
 			])
@@ -543,10 +543,10 @@ export function getpProfile(username, cb) {
 				body: res.body,
 				createdAt: res.user.createdAt,
 				seenAt: res.user.seenAt,
-				avatar: res.user.avatar ? 'https://i.iwara.tv/image/avatar/' + res.user.avatar
+				avatar: res.user.avatar ? 'https://iwaraapi.pro-ivan.cn/imgs/image/avatar/' + res.user.avatar
 					.id + '/' + res.user
 						.avatar.name : 'https://www.iwara.tv/images/default-avatar.jpg',
-				background: res.header ? 'https://i.iwara.tv/image/profileHeader/' + res.header.id + '/' + res.header.name : '/static/img/loli.png',
+				background: res.header ? 'https://iwaraapi.pro-ivan.cn/imgs/image/profileHeader/' + res.header.id + '/' + res.header.name : '/static/img/loli.png',
 				following: res.user.following,
 				friend: res.user.friend
 			}
