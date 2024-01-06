@@ -633,7 +633,7 @@ function creatHeader(cb) {
 
 // 搜索
 export function search(type, query, page, cb) {
-	if (query.startWith('tag:')) {
+	if (query.startsWith('tag:')) {
 	    let data = {
 		    tags: query.replace('tag:', '').replaceAll('&&', '%2C'),
 		    sort: 'date',
