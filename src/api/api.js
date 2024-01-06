@@ -306,7 +306,7 @@ export function getVideo(id, cb) {
 								if (res[i].name != 'preview') {
 									resData.sources.push({
 										name: res[i].name,
-										view: res[i].src.view,
+										view: 'https://back-proxy.pro-ivan.cn/proxy/' + res[i].src.view,
 										download: res[i].src.download
 									})
 								}
