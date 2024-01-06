@@ -633,15 +633,26 @@ function creatHeader(cb) {
 
 // 搜索
 export function search(type, query, page, cb) {
-	let data = {
-		type: type,
-		query: query,
-		page: page,
-		limit: 32
+	if (query.startWith('tag:')) {
+	    let data = {
+		    tags: query.replace('tag:', '').replaceAll('&&', '%2C'),
+		    sort: 'date',
+		    limit: 32
+	    }
+	    ajax(api + '/' + type + 's', data, null, 'GET', (res, code) => {
+		    cb(res, code)
+	    })
+	} else { 
+	    let data = {
+		    type: type,
+		    query: query,
+		    page: page,
+		    limit: 32
+	    }
+	    ajax(api + '/search', data, null, 'GET', (res, code) => {
+		    cb(res, code)
+	    })
 	}
-	ajax(api + '/search', data, null, 'GET', (res, code) => {
-		cb(res, code)
-	})
 }
 
 // 下载
