@@ -637,6 +637,7 @@ export function search(type, query, page, cb) {
 	    let data = {
 		    tags: query.replace('tag:', '').replaceAll('&&', '%2C'),
 		    sort: 'date',
+		    page: page,
 		    limit: 32
 	    }
 	    ajax(api + '/' + type + 's', data, null, 'GET', (res, code) => {
