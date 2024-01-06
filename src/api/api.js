@@ -636,7 +636,7 @@ export function search(type, query, page, cb) {
 	if (query.startsWith('tag:')) {
 	    // 提取 tagName 的值
 	    var tagNameMatch = query.match(/tag:(.+?){/);
-	    var tagName = tagNameMatch ? tagNameMatch[1].replace(/\+/g, "%2C") : query.replace(/\+/g, "%2C"); // 将 + 替换为 %2C
+	    var tagName = tagNameMatch ? tagNameMatch[1].replaceAll(/\+/g, "%2C") : query.replace('tag:', '').replaceAll(/\+/g, "%2C"); // 将 + 替换为 %2C
 	
 	    // 提取 sortName 的值
 	    var sortNameMatch = query.match(/{(.+?)}/);
