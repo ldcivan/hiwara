@@ -652,7 +652,7 @@ export function search(type, query, page, cb) {
 		    cb(res, code)
 	    })
 	} else { 
-	    var queryNameMatch = query.match(/tag:(.+?){/);
+	    var queryNameMatch = query.match(/(.+?){/);
 	    var queryName = queryNameMatch ? queryNameMatch[1].replace(/\+/g, "%2C") : query.replace(/\+/g, "%2C"); // 将 + 替换为 %2C
 	    var sortNameMatch = query.match(/{(.+?)}/);
 	    var sortName = sortNameMatch ? sortNameMatch[1] : "date";
