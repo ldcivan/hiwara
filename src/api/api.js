@@ -18,7 +18,7 @@ api = 'https://api.iwara.tv'
 
 /*#ifdef H5*/
 files = 'https://back-proxy.pro-ivan.cn/proxy/https://files.iwara.tv'
-api = 'https://iwaraapi.pro-ivan.cn/api'
+api = 'https://back-proxy.pro-ivan.cn/proxy/https://api.iwara.tv'
 /*#endif*/
 
 /**API */
