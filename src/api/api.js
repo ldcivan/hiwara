@@ -634,9 +634,27 @@ function creatHeader(cb) {
 // 搜索
 export function search(type, query, page, cb) {
 	if (query.startsWith('tag:')) {
+	    // 提取tag_A+tag_B的值query
+	    const tagMatch = text.match(/tag:(.*?)\{/);
+	    let tag = '';
+	    if (tagMatch && tagMatch[1]) {
+	      tag = tagMatch[1].replace(/\+/g, '%2C');
+	    }
+	
+	    // 提取sort的值sort
+	    const sortMatch = text.match(/\{sort\}/);
+	    let sort = '';
+	    if (sortMatch) {
+	      sort = 'sort';
+	    }
+	
+	    // 如果sort不存在，则给sort赋值'date'
+	    if (!sort) {
+	      sort = 'date';
+	    }
 	    let data = {
-		    tags: query.replace('tag:', '').replaceAll('&&', '%2C'),
-		    sort: 'date',
+		    tags: tag,
+		    sort: sort,
 		    page: page,
 		    limit: 32
 	    }
