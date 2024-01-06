@@ -17,7 +17,7 @@
         <view v-for="item, i in list" class="item" @click="gotoPage(item.id, item.username)">
           <view class="ava">
             <q-avatar class="img" :src="item.avatar != null
-              ? 'https://i.iwara.tv/image/avatar/' +
+              ? 'https://iwaraapi.pro-ivan.cn/imgs/image/avatar/' +
               item.avatar.id + '/' + item.avatar.name
               : 'https://www.iwara.tv/images/default-avatar.jpg'" />
           </view>

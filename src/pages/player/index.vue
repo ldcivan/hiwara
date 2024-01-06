@@ -229,11 +229,11 @@ export default {
 				this.authorOpus.push({
 					id: rs.id,
 					label: rs.title,
-					img: rs.file != null ? 'https://i.iwara.tv/image/thumbnail/' + rs.file.id +
+					img: rs.file != null ? 'https://iwaraapi.pro-ivan.cn/imgs/image/thumbnail/' + rs.file.id +
 						'/thumbnail-' + fill0(rs.thumbnail, 1) + '.jpg' : '/static/img/nachoneko.jpg',
 					date: this.formatDate(rs.createdAt),
 					author: rs.user.name,
-					avatar: rs.user.avatar != null ? 'https://i.iwara.tv/image/avatar/' + rs.user.avatar
+					avatar: rs.user.avatar != null ? 'https://iwaraapi.pro-ivan.cn/imgs/image/avatar/' + rs.user.avatar
 						.id + '/' + rs.user
 							.avatar.name : 'https://www.iwara.tv/images/default-avatar.jpg',
 					watch: rs.numViews,
@@ -249,11 +249,11 @@ export default {
 				this.relatedOpus.push({
 					id: rs.id,
 					label: rs.title,
-					img: rs.file != null ? 'https://i.iwara.tv/image/thumbnail/' + rs.file.id +
+					img: rs.file != null ? 'https://iwaraapi.pro-ivan.cn/imgs/image/thumbnail/' + rs.file.id +
 						'/thumbnail-' + fill0(rs.thumbnail, 1) + '.jpg' : '/static/img/nachoneko.jpg',
 					date: this.formatDate(rs.createdAt),
 					author: rs.user.name,
-					avatar: rs.user.avatar != null ? 'https://i.iwara.tv/image/avatar/' + rs.user.avatar
+					avatar: rs.user.avatar != null ? 'https://iwaraapi.pro-ivan.cn/imgs/image/avatar/' + rs.user.avatar
 						.id + '/' + rs.user
 							.avatar.name : 'https://www.iwara.tv/images/default-avatar.jpg',
 					watch: rs.numViews,

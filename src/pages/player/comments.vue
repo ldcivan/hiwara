@@ -100,7 +100,7 @@ export default {
 							user: res.results[i].user.name,
 							content: res.results[i].body,
 							date: res.results[i].createdAt,
-							avatar: res.results[i].user.avatar ? 'https://i.iwara.tv/image/avatar/' + res.results[i].user.avatar
+							avatar: res.results[i].user.avatar ? 'https://iwaraapi.pro-ivan.cn/imgs/image/avatar/' + res.results[i].user.avatar
 								.id + '/' + res.results[i].user
 									.avatar.name : 'https://www.iwara.tv/images/default-avatar.jpg'
 						})

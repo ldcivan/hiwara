@@ -10,7 +10,7 @@
         <view v-for="item, i in data" class="item" @click="gotoPage(item.user.id, item.user.username)">
           <view class="ava">
             <q-avatar class="img"
-              :src="item.user.avatar ? 'https://i.iwara.tv/image/avatar/' + item.user.avatar.id + '/' + item.user.avatar.name : 'https://www.iwara.tv/images/default-avatar.jpg'" />
+              :src="item.user.avatar ? 'https://iwaraapi.pro-ivan.cn/imgs/image/avatar/' + item.user.avatar.id + '/' + item.user.avatar.name : 'https://www.iwara.tv/images/default-avatar.jpg'" />
           </view>
           <view class="lab">
             {{ item.user.name }}

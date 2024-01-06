@@ -3,7 +3,7 @@
 		<view v-if="user" class="user">
 			<view>
 				<q-avatar class="avatar" :src="user.user.avatar != null
-					? 'https://i.iwara.tv/image/avatar/' +
+					? 'https://iwaraapi.pro-ivan.cn/imgs/image/avatar/' +
 					this.user.user.avatar.id +
 					'/' +
 					this.user.user.avatar.name

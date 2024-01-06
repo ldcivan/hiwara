@@ -100,7 +100,7 @@ export default {
 					label: rs.title,
 					img:
 						rs.thumbnail != null
-							? "https://i.iwara.tv/image/thumbnail/" +
+							? "https://iwaraapi.pro-ivan.cn/imgs/image/thumbnail/" +
 							rs.thumbnail.id +
 							"/" +
 							rs.thumbnail.name
@@ -109,7 +109,7 @@ export default {
 					author: rs.user.name,
 					avatar:
 						rs.user.avatar != null
-							? "https://i.iwara.tv/image/avatar/" +
+							? "https://iwaraapi.pro-ivan.cn/imgs/image/avatar/" +
 							rs.user.avatar.id +
 							"/" +
 							rs.user.avatar.name
