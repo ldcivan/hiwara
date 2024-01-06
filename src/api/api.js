@@ -637,15 +637,15 @@ export function search(type, query, page, cb) {
 	    // 提取tag_A+tag_B的值query
 	    const tagMatch = text.match(/tag:(.*?)\{/);
 	    let tag = '';
-	    if (tagMatch && tagMatch[1]) {
-	      tag = tagMatch[1].replace(/\+/g, '%2C');
+	    if (tagMatch) {
+	      tag = tagMatch[0].replace(/\+/g, '%2C');
 	    }
 	
 	    // 提取sort的值sort
-	    const sortMatch = text.match(/\{sort\}/);
+	    const sortMatch = text.match(/\{(.*?)\}/);
 	    let sort = '';
 	    if (sortMatch) {
-	      sort = 'sort';
+	      sort = sortMatch[0];
 	    }
 	
 	    // 如果sort不存在，则给sort赋值'date'
