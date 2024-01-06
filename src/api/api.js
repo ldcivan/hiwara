@@ -634,27 +634,17 @@ function creatHeader(cb) {
 // 搜索
 export function search(type, query, page, cb) {
 	if (query.startsWith('tag:')) {
-	    // 提取tag_A+tag_B的值query
-	    const tagMatch = text.match(/tag:(.*?)\{/);
-	    let tag = '';
-	    if (tagMatch) {
-	      tag = tagMatch[0].replace(/\+/g, '%2C');
-	    }
+	    // 提取 tagName 的值
+	    var tagName = text.match(/tag:(.+?){/)[1];
+	    tagName = tagName.replace(/\+/g, "%2C"); // 将 + 替换为 %2C
 	
-	    // 提取sort的值sort
-	    const sortMatch = text.match(/\{(.*?)\}/);
-	    let sort = '';
-	    if (sortMatch) {
-	      sort = sortMatch[0];
-	    }
-	
-	    // 如果sort不存在，则给sort赋值'date'
-	    if (!sort) {
-	      sort = 'date';
-	    }
+	    // 提取 sortName 的值
+	    var sortNameMatch = text.match(/{(.+?)}/);
+	    var sortName = sortNameMatch ? sortNameMatch[1] : "date";
+		
 	    let data = {
-		    tags: tag,
-		    sort: sort,
+		    tags: tagName,
+		    sort: sortName,
 		    page: page,
 		    limit: 32
 	    }
