@@ -656,7 +656,7 @@ export function search(type, query, page, cb) {
 	    var sortName = sortNameMatch ? sortNameMatch[1] : "date";
 	    let data = {
 		    type: type,
-		    query: query.match(/(.+?){/)[1];,
+		    query: query.match(/(.+?){/)[1],
 		    sort: sortName,
 		    page: page,
 		    limit: 32
