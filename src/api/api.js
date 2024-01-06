@@ -635,7 +635,7 @@ function creatHeader(cb) {
 export function search(type, query, page, cb) {
 	if (query.startsWith('tag:')) {
 	    // 提取 tagName 的值
-	    var tagName = query.match(/tag:(.+?){/)[1];
+	    var tagName = query.match(/tag:(.+?)?{/)[1];
 	    tagName = tagName.replace(/\+/g, "%2C"); // 将 + 替换为 %2C
 	
 	    // 提取 sortName 的值
@@ -656,7 +656,7 @@ export function search(type, query, page, cb) {
 	    var sortName = sortNameMatch ? sortNameMatch[1] : "date";
 	    let data = {
 		    type: type,
-		    query: query.match(/(.+?){/)[1],
+		    query: query.match(/(.+?)?{/)[1],
 		    sort: sortName,
 		    page: page,
 		    limit: 32
