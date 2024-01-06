@@ -17,8 +17,8 @@ api = 'https://api.iwara.tv'
 
 
 /*#ifdef H5*/
-files = '/files'
-api = '/api'
+files = 'https://iwaraapi.pro-ivan.cn/files'
+api = 'https://iwaraapi.pro-ivan.cn/api'
 /*#endif*/
 
 /**API */
